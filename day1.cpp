@@ -4,8 +4,23 @@
 
 //Code :- 
 #include<iostream>
-#include<algorithm>
 using namespace std;
+void sortArr(int arr[],int size)
+{
+    if(size>1)
+    {
+        for(int i = 0; i < size-1; i ++)
+        {
+            for(int j = i+1; j<size ; j++)
+            {
+                if(arr[i]>arr[j])
+                {
+                    swap(arr[i] , arr[j]);
+                }
+            }
+        }
+    }
+}
 int main()
 {   
     int size;
@@ -15,7 +30,7 @@ int main()
     {
         cin>>arr[i];
     }
-    sort(arr,arr+size);
+    sortArr(arr,size);
     cout<<"[";
     for(int i = 0 ; i<size ; i++)
     {
@@ -26,5 +41,7 @@ int main()
         }
     }
     cout<<"]"<<endl;
+    return 0;
+}
     return 0;
 }
