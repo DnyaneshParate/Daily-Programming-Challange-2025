@@ -18,7 +18,7 @@ void formSubArr(int arr[],int size, vector<int> &begin , vector<int> &end)
         for(int j = i; j<size; j++)
           {
               sum += arr[j];
-              if(sum == 0)
+              if(sum == 0 && i!=j)
               {
                   begin.push_back(i);
                   end.push_back(j);
